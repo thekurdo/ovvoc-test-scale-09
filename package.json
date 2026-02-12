@@ -1,0 +1,7 @@
+{
+  "name": "ovvoc-test-scale-09",
+  "version": "1.0.0",
+  "description": "React SPA with 10 pages using react-router-dom 5",
+  "scripts": { "test": "node test/routes.test.js" },
+  "dependencies": { "react": "18.2.0", "react-dom": "18.2.0", "react-router-dom": "5.3.4" }
+}
