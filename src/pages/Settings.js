@@ -1,9 +1,9 @@
 const React = require('react');
-const { useRouteMatch, useHistory } = require('react-router-dom');
+const { useMatch, useNavigate } = require('react-router-dom');
 
 function Settings() {
-  const match = useRouteMatch();
-  const history = useHistory();
+  const match = useMatch();
+  const history = useNavigate();
   return React.createElement('div', null,
     React.createElement('h1', null, 'Settings'),
     React.createElement('p', null, `Current path: ${match.path}`),

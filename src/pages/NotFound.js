@@ -1,8 +1,8 @@
 const React = require('react');
-const { useHistory, useLocation } = require('react-router-dom');
+const { useNavigate, useLocation } = require('react-router-dom');
 
 function NotFound() {
-  const history = useHistory();
+  const history = useNavigate();
   const location = useLocation();
   return React.createElement('div', null,
     React.createElement('h1', null, '404 - Not Found'),

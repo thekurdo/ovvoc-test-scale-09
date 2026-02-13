@@ -1,8 +1,8 @@
 const React = require('react');
-const { useHistory } = require('react-router-dom');
+const { useNavigate } = require('react-router-dom');
 
 function About() {
-  const history = useHistory();
+  const history = useNavigate();
   return React.createElement('div', null,
     React.createElement('h1', null, 'About Us'),
     React.createElement('p', null, 'Learn more about our company and mission.'),

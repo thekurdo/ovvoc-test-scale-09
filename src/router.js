@@ -1,5 +1,5 @@
 const React = require('react');
-const { Switch, Route, Redirect, useHistory, useLocation } = require('react-router-dom');
+const { Routes, Route, Navigate, useNavigate, useLocation } = require('react-router-dom');
 const Home = require('./pages/Home');
 const About = require('./pages/About');
 const Dashboard = require('./pages/Dashboard');
@@ -12,7 +12,7 @@ const Cart = require('./pages/Cart');
 const NotFound = require('./pages/NotFound');
 
 function AppRouter() {
-  return React.createElement(Switch, null,
+  return React.createElement(Routes, null,
     React.createElement(Route, { exact: true, path: '/', component: Home }),
     React.createElement(Route, { path: '/about', component: About }),
     React.createElement(Route, { path: '/dashboard', component: Dashboard }),
@@ -22,7 +22,7 @@ function AppRouter() {
     React.createElement(Route, { exact: true, path: '/products', component: Products }),
     React.createElement(Route, { path: '/products/:id', component: ProductDetail }),
     React.createElement(Route, { path: '/cart', component: Cart }),
-    React.createElement(Redirect, { from: '/old-home', to: '/' }),
+    React.createElement(Navigate, { from: '/old-home', to: '/' }),
     React.createElement(Route, { component: NotFound })
   );
 }

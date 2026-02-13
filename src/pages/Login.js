@@ -1,8 +1,8 @@
 const React = require('react');
-const { useHistory, useLocation } = require('react-router-dom');
+const { useNavigate, useLocation } = require('react-router-dom');
 
 function Login() {
-  const history = useHistory();
+  const history = useNavigate();
   const location = useLocation();
   const from = location.state && location.state.from ? location.state.from.pathname : '/dashboard';
   return React.createElement('div', null,

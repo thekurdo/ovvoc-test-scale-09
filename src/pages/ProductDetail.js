@@ -1,9 +1,9 @@
 const React = require('react');
-const { useParams, useHistory } = require('react-router-dom');
+const { useParams, useNavigate } = require('react-router-dom');
 
 function ProductDetail() {
   const { id } = useParams();
-  const history = useHistory();
+  const history = useNavigate();
   return React.createElement('div', null,
     React.createElement('h1', null, `Product ${id}`),
     React.createElement('p', null, `Detailed view for product #${id}.`),
