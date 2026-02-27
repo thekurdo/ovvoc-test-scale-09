@@ -1,8 +1,8 @@
 const React = require('react');
-const { useHistory } = require('react-router-dom');
+const { useNavigate } = require('react-router-dom');
 
 function Products() {
-  const history = useHistory();
+  const history = useNavigate();
   const productIds = [1, 2, 3, 4, 5];
   return React.createElement('div', null,
     React.createElement('h1', null, 'Products'),

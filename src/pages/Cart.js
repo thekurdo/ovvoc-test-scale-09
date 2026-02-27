@@ -1,8 +1,8 @@
 const React = require('react');
-const { useHistory } = require('react-router-dom');
+const { useNavigate } = require('react-router-dom');
 
 function Cart() {
-  const history = useHistory();
+  const history = useNavigate();
   return React.createElement('div', null,
     React.createElement('h1', null, 'Shopping Cart'),
     React.createElement('p', null, 'Your cart is empty.'),

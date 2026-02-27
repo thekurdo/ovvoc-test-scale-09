@@ -1,9 +1,9 @@
 const React = require('react');
-const { useParams, useHistory } = require('react-router-dom');
+const { useParams, useNavigate } = require('react-router-dom');
 
 function Profile() {
   const { userId } = useParams();
-  const history = useHistory();
+  const history = useNavigate();
   return React.createElement('div', null,
     React.createElement('h1', null, 'Profile'),
     React.createElement('p', null, `Viewing profile for user: ${userId}`),
